@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>moveTo(),lineTo(),beginPath(),closePath(),save()等等方法</p>
+<p>lineCap属性(butt 默认,round,square)<br>
+</p>
+<canvas id="cx" width="500" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(20,20);
+	ctx.lineTo(20,100);
+    ctx.lineTo(100,100);
+	ctx.lineWidth=5;
+	ctx.strokeStyle='red';
+	ctx.lineCap='round';
+	ctx.closePath();
+    ctx.stroke();
+
+}
+</script>
+</body>
+</html>

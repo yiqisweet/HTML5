@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>rect(x,y,width,height),另一种画矩形的方法</p>
+<p>clearRect(x,y,width,height),擦除指定矩形区域上绘制的图形<br>
+</p>
+<canvas id="cx" width="500" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	ctx.beginPath();//开始定义路径
+	ctx.rect(50,60,70,80);
+	ctx.strokeStyle='red';
+	ctx.fillStyle='green';
+	ctx.lineWidth=10;
+	ctx.closePath();
+	//ctx.fill();
+	ctx.stroke();
+	//ctx.clearRect(80,80,80,80);
+	//ctx.clearRect(0,0,cav.width,cav.height);
+}
+</script>
+</body>
+</html>

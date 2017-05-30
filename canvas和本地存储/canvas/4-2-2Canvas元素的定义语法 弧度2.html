@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>arcTo(x,y,x1,y1)，向Canvas的当前路上添加一段弧。参数1,2为第一个控制点的x,y坐标,参数2为第二个控制点的坐标,参数3为绘制圆弧的半径。<br>
+</p>
+<canvas id="cx" width="550" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	ctx.moveTo(100,100);
+	ctx.arcTo(100,30,200,30,50);
+	ctx.stroke();
+	
+}
+</script>
+</body>
+</html>

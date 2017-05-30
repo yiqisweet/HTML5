@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>measureText，字符串宽度</p>
+<p>shadowOffsetX、shadowOffsetY X轴偏移、Y轴偏移</p>
+<canvas id="cx" width="550" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	ctx.font='50px Microsoft Yahei';
+	ctx.textBaseline='top';
+	
+	ctx.shadowBlur=8;//模糊程度
+	ctx.shadowColor='red';//颜色
+	ctx.shadowOffsetX=5;//偏移度X
+	ctx.shadowOffsetY=9;//偏移度Y
+	ctx.fillText('优就业IT培训',100,10);
+	
+	
+	var str='我们';
+	var strWidth=ctx.measureText(str).width;//字符串宽度
+	ctx.fillText(str+'width：'+strWidth,50,400);
+	
+	
+	//ctx.stroke();
+}
+</script>
+</body>
+</html>

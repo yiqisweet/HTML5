@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+
+<script>
+window.onload = function(){
+	var obtn = document.getElementsByTagName('input');
+	oText = document.getElementById('oinput');
+	obtn[0].onclick = function(){
+		//window.sessionStorage.setItem('name',oText.value);
+		window.localStorage.setItem('name',oText.value);
+	};
+	obtn[1].onclick = function(){
+		alert(window.localStorage.getItem('name'))
+	};
+	obtn[2].onclick = function(){
+		window.localStorage.removeItem('name');
+	};
+}
+
+</script>
+<body>
+
+<!--
+
+cookie概述，缺点
+
+本地存储概述：本地存储的优势
+
+sessionStorage
+localStorage
+
+key value
+setItem
+getItem
+removeItem
+
+clear
+
+本地储存的设置，获取，删除
+
+-->
+<input type="button" value="设置"> <input type="button" value="获取"> <input type="button" value="删除"> <input type="text" id="oinput">
+
+</body>
+</html>

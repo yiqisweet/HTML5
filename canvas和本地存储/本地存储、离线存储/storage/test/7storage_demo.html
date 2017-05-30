@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<script>
+window.onload = function(){
+
+var oCheck = document.getElementsByTagName('input');
+
+for(var i=0;i<oCheck.length;i++){
+	oCheck[i].onclick = function(){
+		if(this.checked){
+			window.localStorage.setItem('sel',this.value);
+		}else{
+			window.localStorage.setItem('osel',this.value);
+		};
+	}
+};
+window.onstorage = function(ev){
+	if(ev.key=='sel'){
+		for(var i=0;i<oCheck.length;i++){
+			if(ev.newValue==oCheck[i].value){
+				oCheck[i].checked = true;
+			};
+		};
+	}else if(ev.key=='osel'){
+		for(var i=0;i<oCheck.length;i++){
+			if(ev.newValue==oCheck[i].value){
+				oCheck[i].checked = false;
+			};
+		};
+	};
+};
+
+}
+</script>
+<!--
+	同步购物车
+    
+    1.给每个checkbox添加单击事件
+    2.判断选中还是取消，并设置不同的键值并赋值
+    
+    3.storage事件监听，判断键值的不同，来设置同步购物车。
+    
+-->
+<body>
+<input type="checkbox" value="汽车"> 汽车<br>
+<input type="checkbox" value="自行车"> 自行车<br>
+<input type="checkbox" value="跑步机"> 跑步机<br>
+<input type="checkbox" value="篮球"> 篮球<br>
+</body>
+</html>

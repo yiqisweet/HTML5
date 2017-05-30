@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>drawImage()，画位图</p>
+<p>首先得new image()，然后指定图像地址</p>
+<canvas id="cx" width="550" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	
+	var cImage=new Image();
+	cImage.src='http://www.ujiuye.com/statics/images/ui/uiLogo.jpg';//可以是本地图片，也可以是网络图片
+	cImage.onload=function(){
+		ctx.drawImage(cImage,100,50);
+	}
+}
+</script>
+</body>
+</html>

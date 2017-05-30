@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>createLinearGradient(x1,y1,x2,y2) 线性渐变 </p>
+<p>createRadialGradient(x1,y1,r1,x2,y2,r2)放射性渐变 </p>
+<canvas id="cx" width="550" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	
+	var lg=ctx.createLinearGradient(0,0,100,200);
+//	var lg=ctx.createRadialGradient(50,100,100,50,100,300);
+	lg.addColorStop(0.5,'red');
+    lg.addColorStop(0.8,'black');
+
+	
+	ctx.fillStyle=lg;
+
+	ctx.fillRect(50,100,300,300);
+	
+}
+</script>
+</body>
+</html>

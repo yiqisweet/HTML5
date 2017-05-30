@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无标题文档</title>
+</head>
+<style>
+body{background:#000;color:#fff;}
+#cx{background:#fff;}
+</style>
+<body>
+<p>arc(x,y,r,startAngle,endAngle,bolean counterclockwise)，向Canvas的当前路上添加一段弧。绘制以x、y为圆心，r为半径，从startAngle角度开始，到endAngle角度结束的圆弧。<br>
+</p>
+<canvas id="cx" width="500" height="500">
+	您的浏览器不支持canvas
+</canvas>
+<script>
+window.onload = function(){
+	var cav=document.getElementById("cx");
+	var ctx=cav.getContext("2d");
+	//ctx.beginPath();//开始定义路径
+//	ctx.moveTo(200,200);
+	//ctx.arc(200,200,150,0,90*Math.PI/180,true);
+	ctx.arc(200,200,150,0,360*Math.PI/180,false);
+//	ctx.moveTo(145,125);
+	ctx.arc(135,125,10,0,360*Math.PI/180);
+    ctx.arc(235,125,10,0,360*Math.PI/180);
+//	ctx.arc(200,200,150,0,90*Math.PI/180,true);
+	ctx.stroke();
+	//ctx.closePath();
+}
+</script>
+</body>
+</html>
