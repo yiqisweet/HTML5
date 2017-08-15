@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" value="飞机">飞机
+<input type="checkbox" value="大炮">大炮
+<input type="checkbox" value="轮船">轮船
+<input type="checkbox" value="火箭">火箭
+</body>
+<script>
+    var inputList = document.getElementsByTagName('input');
+
+    window.addEventListener('storage',function(ev){
+        if(ev.key == 'sel'){
+            for(var i=0;i<inputList.length;i++){
+                if(ev.newValue == inputList[i].value){
+                    inputList[i].checked = true;
+                }
+            }
+        }else if(ev.key == 'osel'){
+            for(var i=0;i<inputList.length;i++){
+                if(ev.newValue == inputList[i].value){
+                    inputList[i].checked = false;
+                }
+            }
+        }
+    })
+</script>
+</html>

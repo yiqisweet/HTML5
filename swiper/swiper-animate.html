@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        .swiper-container{
+            width:100%;
+            height:100%
+        }
+        .swiper-slide img{
+            width: 100%;
+            height:100%;
+        }
+        .swiper-slide{
+            text-align: center;
+        }
+        .text{
+            position: absolute;
+            z-index:3;
+            top:80%;
+            width: 400px;
+            font-size: 18px;
+            /*margin:0 auto;*/
+        }
+        .vintage{
+            background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+            text-shadow: 5px -5px black, 4px -4px white;
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text }
+        .threed{
+            color: #fafafa;
+            letter-spacing: 0;
+            text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide ">
+            <img src="../img/1.png" alt="">
+            <p class="ani text vintage" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="2s" swiper-animate-delay="1s">欢迎来到美食天下</p>
+            <p class="ani text threed" style="top:90%" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="2s" swiper-animate-delay="1.5s">哈哈哈</p>
+        </div>
+        <div class="swiper-slide ">
+            <img src="../img/2.png" alt="">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="../js/swiper.min.js"></script>
+<script src="../js/swiper.animate1.0.2.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        loop:true,
+        pagination : '.swiper-pagination',
+        onInit:function(swiper){
+            //先隐藏动画
+            swiperAnimateCache(swiper)
+            //加载动画
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd:function(swiper){
+            //加载动画
+            swiperAnimate(swiper);
+        }
+    })
+</script>
+</body>
+</html>

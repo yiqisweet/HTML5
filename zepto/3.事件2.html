@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>消息1</p>
+<p>消息2</p>
+<p>消息3</p>
+
+<script src="js/zepto.js"></script>
+<script>
+//$('p').click(function(){
+//    console.log(1);
+//})
+//
+//    $('p').on('click',function(){
+//        console.log(2);
+//    })
+//    $('p').on('click',{name : 'zepto'},function(event){
+//        console.log(event);
+//    })
+//$('p').on('click dblclick',function(){
+//    console.log(1)
+//})
+$(function(){
+    $('p').on({
+        click : function(e){
+            console.log(1)
+        },
+        mouseover : function(){
+            $(this).css('background-color','red')
+        },
+        mouseout:function(){
+            $(this).css('background-color','blue')
+        }
+    })
+    setTimeout(function(){
+        $('p').off();
+
+    },2000)
+
+
+})
+
+</script>
+</body>
+</html>

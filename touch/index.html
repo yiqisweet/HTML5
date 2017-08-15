@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wrap{
+            text-align: center;
+        }
+        #wrap img{
+            width:200px;
+            height:200px;
+
+        }
+        .bounce{
+            -webkit-animation:bounce 0.2s;
+            -o-animation:bounce 0.2s;
+            animation:bounce 0.2s;
+        }
+        @-webkit-keyframes bounce {
+            0%,20%,50%,80%,100%{-webkit-transform: translateY(0)}
+            40% {-webkit-transform: translateY(-30px)}
+            60%{-webkit-transform: translateY(-15px)}
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <img id="target" src="../img/cloud.png" alt="">
+</div>
+<div id="logs">
+
+</div>
+
+<script src="../js/touch.min.js"></script>
+<script src="js/style.js"></script>
+<script>
+
+</script>
+</body>
+</html>

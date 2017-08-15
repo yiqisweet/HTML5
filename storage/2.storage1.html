@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //除了获取之外的api，都可触发事件，不能在同页面上触发
+    window.addEventListener('storage',function(ev){
+        //存储和删除都会返回当前key，clear返回null
+//        console.log(ev.key);
+
+        //返回新值
+//        console.log(ev.newValue)
+        //返回上一次旧值
+//        console.log(ev.oldValue);
+
+        //返回当前storage对象
+//        console.log(ev.storageArea);
+        //返回当前从哪里触发的url
+//        console.log(ev.url)
+    })
+</script>
+</body>
+</html>

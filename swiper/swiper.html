@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        .swiper-container{
+            width:100%;
+            height:100%;
+        }
+        .box1{
+            background-color: deepskyblue;
+        }
+        .box2{
+            background-color: yellow;
+        }
+        .box3{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--1页面-->
+        <div class="swiper-slide box1"></div>
+        <!--2页面-->
+        <div class="swiper-slide box2"></div>
+        <!--3页面-->
+        <div class="swiper-slide box3"></div>
+    </div>
+    <!--分页器-->
+    <div class="swiper-pagination"></div>
+
+    <!--前后退按钮-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+
+<script src="../js/swiper.min.js"></script>
+<script>
+
+    var mySwiper = new Swiper('.swiper-container',{
+        loop : true, //可循环
+        effect : 'cube', //切换效果
+        pagination :'.swiper-pagination', //分页
+        nextButton : '.swiper-button-next', //下一页按钮
+        prevButton : '.swiper-button-prev', //上一页按钮
+        onInit : function(swiper){
+            //初始化
+            console.log(1);
+        },
+        onSlideChangeEnd : function(swiper){
+            //切换页面触发
+            console.log(2);
+        }
+    })
+
+</script>
+</body>
+</html>

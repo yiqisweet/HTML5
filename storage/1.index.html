@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="txtMsg">
+
+<input type="button" value="设置">
+<input type="button" value="获取">
+<input type="button" value="删除">
+<input type="button" value="清空">
+
+<script>
+
+    var msg = document.getElementById('txtMsg');
+    var inputList = document.getElementsByTagName('input');
+
+    //存储
+    inputList[1].onclick = function(){
+        window.localStorage.setItem('name',msg.value);
+    }
+    //获取
+    inputList[2].onclick = function(){
+        console.log(window.localStorage.getItem('name'))
+    }
+
+    //删除
+    inputList[3].onclick = function(){
+        window.localStorage.removeItem('name')
+    }
+
+    //清空
+    inputList[4].onclick = function(){
+        window.localStorage.clear();
+    }
+
+
+</script>
+</body>
+</html>
