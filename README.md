@@ -1,3 +1,3 @@
 # canvas
 
-canvas练习
+日常练习
