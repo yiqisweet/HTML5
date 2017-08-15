@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #cvs{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id="cvs" width="500" height="500"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    if(cvs.getContext){
+        var ctx = cvs.getContext('2d');
+        //由moveTo 定义起点，控制点一 是控制的起点 ，控制点二 是控制的结束点
+        ctx.moveTo(140,120);
+        ctx.bezierCurveTo(130,90,50,150,50,120);
+        ctx.stroke();
+    }
+</script>
+</body>
+</html>

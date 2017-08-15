@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #cvs{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id="cvs" width="500" height="500"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    if(cvs.getContext){
+        var ctx = cvs.getContext('2d');
+        //由moveTo 定义起点 ，再由二次贝塞尔曲线的xy定义结束点，最后靠控制点进行拉伸
+        ctx.moveTo(140,120);
+        ctx.quadraticCurveTo(106,118,110,145);
+        ctx.quadraticCurveTo(110,185,135,180);
+        ctx.quadraticCurveTo(130,195,120,195);
+        ctx.quadraticCurveTo(138,196,145,180);
+        ctx.quadraticCurveTo(183,176,180,151);
+        ctx.quadraticCurveTo(187,110,140,120);
+        ctx.stroke();
+    }
+</script>
+</body>
+</html>
