@@ -7,6 +7,7 @@ function isPassive() {
                 supportsPassiveOption = true;
             }
         }));
+        //设置utils库
     } catch(e) {}
     return supportsPassiveOption;
 }
