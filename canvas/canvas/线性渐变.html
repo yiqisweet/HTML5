@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <script type="text/javascript">
+    CanvasGradient = ctx.createLinearGradient(x0, y0, x1, y1)
+    // 渐变的开始地点(x0, y0)，结束地点(x1, y1)指定后，返回线性渐变对象CanvasGradient。
+    // 然后我们通过addColorStop方法，offset为0的地方为开始地点的颜色，offset为1的则为结束地点的颜色。另外，
+    // 很明显的，x0=x1并且y0=y1的时候，不会有渐变效果出现。
+
+    CanvasGradient.addColorStop(offset, color)
+    // 这个方法就是增加点的颜色，如果offset大于1或者小于0，会发生INDEX_SIZE_ERR异常；color可以是任何合法的CSS颜色，如果不是，则会发生SYNTAX_ERR异常。
+    // 如果offset是指定0到1之间的值，则是对应中间的比例位置。
+    </script>
+  </body>
+</html>
