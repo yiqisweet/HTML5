@@ -1,1 +1,48 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>Title</title>    <style>        #cx{            border:1px solid #000000;        }    </style></head><body>        <!-- 定义canvas 元素 -->    <canvas id="cx" width="800" height="500">    </canvas>    <script>        //获取canvas标签        var canvas = document.getElementById("cx");        // 通过获取到的canvas标签对象来调用getContext('2d'); 返回canvasRenderingContext2D 对象  = ctx        var ctx =  canvas.getContext("2d");      //  fillStyle 属性 设置填充颜色       ctx.fillStyle = "rgb(34,112,185)";            // 填充矩形       ctx.fillRect(30,30,50,50);      ctx.fillStyle = "rgba(203,229,238,0.8)"       ctx.fillRect(40,40,50,50);        //描边矩形，不填充        ctx.lineWidth = "2";        ctx.strokeStyle = "red";        ctx.strokeRect(80,80,50,50);        ctx.fillRect(200,200,100,100);        ctx.clearRect(230,230,50,50);        ctx.fillRect(300,300,100,100);        ctx.strokeRect(300,300,100,100);            </script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #cx {
+      border: 1px solid #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 定义canvas 元素 -->
+  <canvas id="cx" width="800" height="500">
+    </canvas>
+
+
+  <script>
+    //获取canvas标签
+    var canvas = document.getElementById("cx");
+    // 通过获取到的canvas标签对象来调用getContext('2d'); 返回canvasRenderingContext2D 对象  = ctx
+    var ctx = canvas.getContext("2d");
+
+    //  fillStyle 属性 设置填充颜色
+    ctx.fillStyle = "rgb(34,112,185)";
+    // 填充矩形
+    ctx.fillRect(30, 30, 50, 50);
+    ctx.fillStyle = "rgba(203,229,238,0.8)"
+    ctx.fillRect(40, 40, 50, 50);
+
+
+    //描边矩形，不填充
+    ctx.lineWidth = "2";
+    ctx.strokeStyle = "red";
+    ctx.strokeRect(80, 80, 50, 50);
+
+    ctx.fillRect(200, 200, 100, 100);
+    ctx.clearRect(230, 230, 50, 50);
+
+
+    ctx.fillRect(300, 300, 100, 100);
+    ctx.strokeRect(300, 300, 100, 100);
+  </script>
+</body>
+
+</html>
