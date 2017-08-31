@@ -1,1 +1,41 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>Title</title>    <style>        #cx{            border:1px solid #000000;        }    </style></head><body><!-- 定义canvas 元素 --><canvas id="cx" width="800" height="700"></canvas><script>    //获取canvas标签    var canvas = document.getElementById("cx");    // 通过获取到的canvas标签对象来调用getContext('2d'); 返回canvasRenderingContext2D 对象  = ctx    var ctx =  canvas.getContext("2d");    var img = new Image();    img.src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495434684751&di=4edaecc2f5e1f4e1fd3e41d80644fa31&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fastro%2Fpics%2Fhv1%2F114%2F65%2F1859%2F120898164.jpg";    img.onload = function(){        var imgb = ctx.createPattern(img,"repeat")        ctx.fillStyle = imgb;        ctx.fillRect(0,0,500,500);    }</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #cx {
+      border: 1px solid #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 定义canvas 元素 -->
+  <canvas id="cx" width="800" height="700">
+</canvas>
+
+
+  <script>
+    //获取canvas标签
+    var canvas = document.getElementById("cx");
+    // 通过获取到的canvas标签对象来调用getContext('2d'); 返回canvasRenderingContext2D 对象  = ctx
+    var ctx = canvas.getContext("2d");
+
+    var img = new Image();
+
+    img.src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495434684751&di=4edaecc2f5e1f4e1fd3e41d80644fa31&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fastro%2Fpics%2Fhv1%2F114%2F65%2F1859%2F120898164.jpg";
+
+    img.onload = function() {
+      var imgb = ctx.createPattern(img, "repeat")
+      ctx.fillStyle = imgb;
+      ctx.fillRect(0, 0, 500, 500);
+    }
+    // var img = new Image();
+    // img.src = "tu0.jpg";
+    // cxt.drawImage(img, 50, 50);
+  </script>
+</body>
+
+</html>
