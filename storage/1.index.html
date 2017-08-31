@@ -17,13 +17,14 @@
     var msg = document.getElementById('txtMsg');
     var inputList = document.getElementsByTagName('input');
 
-    //存储
-    inputList[1].onclick = function(){
-        window.localStorage.setItem('name',msg.value);
-    }
     //获取
     inputList[2].onclick = function(){
         console.log(window.localStorage.getItem('name'))
+    }
+
+    //存储
+    inputList[1].onclick = function(){
+        window.localStorage.setItem('name',msg.value);
     }
 
     //删除

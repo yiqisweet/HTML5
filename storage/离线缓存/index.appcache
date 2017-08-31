@@ -1,0 +1,9 @@
+CACHE MANIFEST
+#v0.4
+CACHE:
+img/3.jpg
+img/2.jpg
+NETWORK:
+*
+FALLBACK:
+img/1.jpg img/3.jpg
