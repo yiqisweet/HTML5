@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="s">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    #header {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      height: 40px;
+      background-color: #007aff;
+      color: #ffffff;
+      line-height: 40px;
+    }
+
+    #footer {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #007aff;
+      color: #ffffff;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    #wrapper {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      overflow: hidden;
+      top: 40px;
+      bottom: 40px;
+      background-color: #fafafa;
+    }
+
+    #scroller {
+      position: absolute;
+      width: 100%;
+    }
+
+    #scroller ul {}
+
+    #scroller li {
+      padding: 0 10px;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #ffffff;
+      border-top: 1px solid #cccccc;
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+
+<body onload="loaded()">
+
+  <div id="header">header</div>
+
+
+  <div id="wrapper">
+    <div id="scroller">
+      <ul>
+        <li>Pretty row 1</li>
+        <li>Pretty row 2</li>
+        <li>Pretty row 3</li>
+        <li>Pretty row 4</li>
+        <li id="me"><a href="" onclick="console.log(this.parentNode.style.background);this.parentNode.style.background =this.parentNode.style.background == ''?'#c3c3c3':'';return false">click me</a></li>
+        <li>Pretty row 6</li>
+        <li onclick="msg(this)">click me</li>
+        <li>Pretty row 8</li>
+        <li>Pretty row 9</li>
+        <li>Pretty row 10</li>
+        <li>Pretty row 11</li>
+        <li>Pretty row 12</li>
+        <li>Pretty row 13</li>
+        <li>Pretty row 14</li>
+        <li>Pretty row 15</li>
+        <li>Pretty row 16</li>
+        <li>Pretty row 17</li>
+        <li>Pretty row 18</li>
+        <li>Pretty row 19</li>
+        <li>Pretty row 20</li>
+        <li>Pretty row 21</li>
+        <li>Pretty row 22</li>
+        <li>Pretty row 23</li>
+        <li>Pretty row 24</li>
+        <li>Pretty row 25</li>
+        <li>Pretty row 26</li>
+        <li>Pretty row 27</li>
+        <li>Pretty row 28</li>
+        <li>Pretty row 29</li>
+        <li>Pretty row 30</li>
+        <li>Pretty row 31</li>
+        <li>Pretty row 32</li>
+        <li>Pretty row 33</li>
+        <li>Pretty row 34</li>
+        <li>Pretty row 35</li>
+        <li>Pretty row 36</li>
+        <li>Pretty row 37</li>
+        <li>Pretty row 38</li>
+        <li>Pretty row 39</li>
+        <li>Pretty row 40</li>
+        <li>Pretty row 41</li>
+        <li>Pretty row 42</li>
+        <li>Pretty row 43</li>
+        <li>Pretty row 44</li>
+        <li>Pretty row 45</li>
+        <li>Pretty row 46</li>
+        <li>Pretty row 47</li>
+        <li>Pretty row 48</li>
+        <li>Pretty row 49</li>
+        <li>Pretty row 50</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer">footer</div>
+
+  <script src="../js/iscroll.js"></script>
+  <script>
+    var myScroll;
+
+    function loaded() {
+      setTimeout(function() {
+        myScroll = new IScroll('#wrapper', {
+          bounceEasing: "'elastic",
+          bounceTime: 1200,
+          click: true
+        })
+      }, 200)
+    }
+
+    function msg() {
+      console.log(arguments)
+    }
+  </script>
+</body>
+
+</html>
